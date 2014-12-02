@@ -3,7 +3,7 @@
 
 """
 A class that uses different static function depending of a parameter passed in
-init. Note the use of a single dictionnary instead of multiple conditions
+init. Note the use of a single dictionary instead of multiple conditions
 """
 __author__ = "Ibrahim Diop <http://ibrahim.zinaria.com>"
 __gist__ = "<https://gist.github.com/diopib/7679559>"
@@ -21,8 +21,10 @@ class Catalog():
         # dictionary that will be used to determine which static method is
         # to be executed but that will be also used to store possible param
         # value
-        self._static_method_choices = {'param_value_1': self._static_method_1,
-                                      'param_value_2': self._static_method_2}
+        self._static_method_choices = {
+            'param_value_1': self._static_method_1,
+            'param_value_2': self._static_method_2
+        }
 
         # simple test to validate param value
         if param in self._static_method_choices.keys():
